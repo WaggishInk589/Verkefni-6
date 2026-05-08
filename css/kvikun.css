@@ -4,21 +4,18 @@ html {
 
 #slide > * {
     animation: 20s autoplay infinite linear;
-    position: absolute;
-    overflow: hidden;
     width: 100%;
-    top: 4rem;
+    opacity: 1;
+    top: 0;
     left: 0;
-    margin-left: 100%;
 }
 
 @keyframes autoplay {
-    0% {margin-left: 100%;}
-    10% {margin-left: 0;}
-    50% {margin-left: 0;}
-    60% {margin-left: -100%}
-    100% {margin-left: -100%}
+    10% {opacity: 1;}
+    60% {opacity: 1;}
+    70% {opacity: 0;}
+    100% {opacity: 0;}
 }
 
-#slide > *:nth-child(1) {margin-left: 0; animation-delay: 0s}
-#slide > *:nth-child(2) {margin-left: 100%; animation-delay: 10s}
+#slide > *:nth-child(1) {opacity: 1; animation-delay: 0s; position: absolute;}
+#slide > *:nth-child(2) {opacity: 0;; animation-delay: 10s; position: relative;}
