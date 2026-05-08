@@ -6,6 +6,7 @@ html {
     animation: 20s autoplay infinite linear;
     position: absolute;
     overflow: hidden;
+    width: 100%;
     top: 4rem;
     left: 0;
     margin-left: 100%;
