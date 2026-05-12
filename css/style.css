@@ -5,9 +5,6 @@
     justify-items: center;
 }
 
-.back {
-    display: none;
-}
 article:hover .front {
     animation: 1s flip_front linear;
 } 
