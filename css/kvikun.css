@@ -1,7 +1,7 @@
 html {
     overflow-x: hidden;
 }
-
+/*
 #slide > * {
     animation: 20s autoplay infinite linear;
     width: 100%;
@@ -10,6 +10,7 @@ html {
     top: 0;
     left: 0;
 }
+*/
 
 @keyframes autoplay {
     10% {opacity: 1;}
