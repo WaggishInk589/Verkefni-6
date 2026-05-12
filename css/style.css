@@ -4,3 +4,40 @@
     gap: 1rem;
     justify-items: center;
 }
+
+.back {
+    display: none;
+}
+article:hover .front {
+    animation: 1s flip_front linear;
+} 
+article:hover .back {
+    animation: 1s flip_back linear;
+}
+
+@keyframes flip_front {
+    0% {
+        transform: rotateY(0);
+    }
+    50% {
+        display: none;
+        transform: rotateY(90deg);
+    }
+    100% {
+        display: none;
+        transform: rotateY(180deg);
+    }
+}
+@keyframes flip_back {
+    0% {
+        transform: rotateY(90deg);
+    }
+    50% {
+        display: block;
+        transform: rotateY(90deg);
+    }
+    100% {
+        display: block;
+        transform: rotateY(0);
+    }
+}
