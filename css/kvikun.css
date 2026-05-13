@@ -1,23 +1,27 @@
-html {
-    overflow-x: hidden;
+#slide {
+    position: relative;
+    min-height: 360px;
+    max-height: 480px;
 }
-/*
+
 #slide > * {
-    animation: 20s autoplay infinite linear;
+    animation: 20s autoplay infinite;
     width: 100%;
-    padding-top: 5rem;
-    opacity: 1;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
     top: 0;
     left: 0;
+    opacity: 0;
 }
-*/
 
 @keyframes autoplay {
+    0% {opacity: 0;}
     10% {opacity: 1;}
-    60% {opacity: 1;}
-    70% {opacity: 0;}
+    50% {opacity: 1;}
+    60% {opacity: 0;}
     100% {opacity: 0;}
 }
 
-#slide > *:nth-child(1) {opacity: 1; animation-delay: 0s; position: absolute;}
-#slide > *:nth-child(2) {opacity: 0;; animation-delay: 10s; position: relative;}
+#slide > *:nth-child(1) {animation-delay: 0s;}
+#slide > *:nth-child(2) {animation-delay: 10s;}
