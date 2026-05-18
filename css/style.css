@@ -33,9 +33,50 @@ nav ul {
     height: 60px;
 }
 
-.grid-4 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-top: 2rem;
+.responsive-nav[role="list"] {
+    border: none;
+}
+
+
+
+.responsive-nav[role="list"] ul[role="listbox"] {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    z-index: 1;
+}
+
+.responsive-nav[role="list"] ul[role="listbox"] li {
+    padding: 0 10px;
+}
+
+@media (max-width: 991px) {
+    .responsive-nav summary.nav-toggle {
+        display: block;
+        padding: 0.5rem 1rem;
+        background-color: #1a1a1a;
+        color: #FFD700;
+        border: 1px solid #FFD700;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .responsive-nav[role="list"] ul[role="listbox"] {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        min-width: 200px;
+        background-color: #1a1a1a;
+        border: 1px solid #FFD700;
+    }
+
+    .responsive-nav[open] ul[role="listbox"] {
+        display: block;
+    }
 }
