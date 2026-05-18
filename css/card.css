@@ -40,6 +40,9 @@
     transition: transform 0.5s;
     transform-style: preserve-3d;
 }
+img {
+    width: 100%;
+}
 
 .card:hover .inner {
     transform: rotateY(180deg);
