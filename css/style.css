@@ -1,5 +1,25 @@
+:root {
+    --ua-gold: #FFD700;
+}
+
 .highlight {
-    color: green;
+    color: var(--ua-gold) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.plus-ultra {
+    color: var(--ua-gold);
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+
+
+nav {
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid var(--ua-gold);
 }
 
 nav ul {
@@ -10,10 +30,12 @@ nav ul {
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 60px;
 }
 
 .grid-4 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    margin-top: 2rem;
 }
