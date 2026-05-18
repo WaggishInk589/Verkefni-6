@@ -1,28 +1,54 @@
-#slide {
+#slides {
     position: relative;
     height: 25rem;
 }
 
-#slide > * {
-    animation: 30s autoplay infinite;
+#slides > * {
+    animation: 60s autoplay infinite;
+    position: absolute;
+    inset: 0 0 0 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    opacity: 0;
+}
+
+#slides > * img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+}
+
+#slides > * p {
     position: absolute;
-    top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 1rem;
+    color: #fff;
+    background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0, 0, 0, 0.55));
     opacity: 0;
-    border-radius: 1rem;
+    transform: translateY(100%);
+    transition: opacity .5s, transform .5s;
+}
+
+#slides > *:hover p {
+    opacity: 1;
+    transform: translateY(0%);
 }
 
 @keyframes autoplay {
     0% {opacity: 0;}
-    10% {opacity: 1;}
-    50% {opacity: 1;}
-    60% {opacity: 0;}
+    3.4% {opacity: 1;}
+    16.6% {opacity: 1;}
+    20% {opacity: 0;}
     100% {opacity: 0;}
 }
 
-#slide > *:nth-child(1) {animation-delay: 0s;}
-#slide > *:nth-child(2) {animation-delay: 10s;}
-#slide > *:nth-child(3) {animation-delay: 20s;}
+#slides > *:nth-child(1) {animation-delay: 0s;}
+#slides > *:nth-child(2) {animation-delay: 10s;}
+#slides > *:nth-child(3) {animation-delay: 20s;}
+#slides > *:nth-child(4) {animation-delay: 30s;}
+#slides > *:nth-child(5) {animation-delay: 40s;}
+#slides > *:nth-child(6) {animation-delay: 50s;}
